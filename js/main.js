@@ -101,3 +101,35 @@ function fizzbuzz(num){
 }
 
 console.log(fizzbuzz(100))
+
+//rot13
+//---------------------------------------------------------------------------------
+
+let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let str = "";
+let empty = "";
+
+function rot13(message) {
+  for (let i = 0; i < message.length; i++) {
+    let letter = alphabet.filter(a => a === message[i]);
+    let newString = letter.toString();
+    console.log("L " + newString)
+    let newLetter = alphabet.findIndex(x => x === message[i]) + 13
+    if(newLetter ===  12){
+      str += newString
+    }
+    else if (newLetter > 26) {
+      let newNum = newLetter - 26;
+      let finalLetter = alphabet[newNum];
+      console.log(finalLetter)
+      str += finalLetter;
+    } else {
+      let oFinalLetter = alphabet[newLetter]
+      console.log(oFinalLetter)
+      str += oFinalLetter;
+    }
+  }
+  return (str)
+}
+
+console.log(rot13("hi there"))
