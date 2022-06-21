@@ -133,3 +133,24 @@ function rot13(message) {
 }
 
 console.log(rot13("hi there"))
+
+//------------------------------------------------------------------------
+
+decodeMorse = function(morseCode){
+  let result = [];
+  morseCode = morseCode.trim();
+  let data = morseCode.split( " ")
+
+  for(let i = 0; i < data.length; i++) {
+    let x = data[i].split(' ');
+    for(let j = 0; j < x.length; j++){
+      if(morseCode[x[j]]){
+        result.push(morseCode[x[j]]);
+      }
+    }
+    if (i !== data.length - 1){
+      result.push(' ');
+    }
+  }
+  return result.join('')
+}
