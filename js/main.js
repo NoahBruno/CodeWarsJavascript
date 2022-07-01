@@ -164,21 +164,35 @@
 //         return string.indexOf(x) !== -1;
 //       });
 // }
+//
+// function maxSequenceSum( arr ) {
+//   //Insert your code here
+//   let maxSum = 0;
+//
+//   for(let i = 0; i < arr.length; i++){
+//     console.log(arr[i])
+//     maxSum += arr[i];
+//     if(maxSum < 0){
+//       maxSum=0
+//     }
+//
+//
+//   }
+//   return maxSum;
+// }
+//
+// console.log(maxSequenceSum([2,-1,3,4,-6]))
 
-function maxSequenceSum( arr ) {
-  //Insert your code here
-  let maxSum = 0;
-
-  for(let i = 0; i < arr.length; i++){
-    console.log(arr[i])
-    maxSum += arr[i];
-    if(maxSum < 0){
-      maxSum=0
+//------------------------------------------------------------------
+var uniqueInOrder=function(iterable){
+  //your code here - remember iterable can be a string or an array
+  let arr = []
+  for(let i = 0; i<iterable.length; i++){
+    if (iterable[i] !== iterable[i + 1]){
+      arr.push(iterable[i])
     }
-
-
   }
-  return maxSum;
-}
+  return arr;
 
-console.log(maxSequenceSum([2,-1,3,4,-6]))
+}
+console.log(uniqueInOrder("AABBCcAD"))
