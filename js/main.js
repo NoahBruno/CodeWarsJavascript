@@ -184,15 +184,35 @@
 // console.log(maxSequenceSum([2,-1,3,4,-6]))
 
 //------------------------------------------------------------------
-var uniqueInOrder=function(iterable){
-  //your code here - remember iterable can be a string or an array
-  let arr = []
-  for(let i = 0; i<iterable.length; i++){
-    if (iterable[i] !== iterable[i + 1]){
-      arr.push(iterable[i])
-    }
-  }
-  return arr;
+// var uniqueInOrder=function(iterable){
+//   //your code here - remember iterable can be a string or an array
+//   let arr = []
+//   for(let i = 0; i<iterable.length; i++){
+//     if (iterable[i] !== iterable[i + 1]){
+//       arr.push(iterable[i])
+//     }
+//   }
+//   return arr;
+//
+// }
+// console.log(uniqueInOrder("AABBCcAD"))
 
+//=================================================================
+
+function countSheeps(arrayOfSheep) {
+  let count = 0;
+  for(let i = 0; i < arrayOfSheep.length; i++){
+    if(arrayOfSheep[i] === true){
+      count++
+    }
+  }return count
 }
-console.log(uniqueInOrder("AABBCcAD"))
+
+let arrayOfSheep= [true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+
+console.log(countSheeps(arrayOfSheep))
