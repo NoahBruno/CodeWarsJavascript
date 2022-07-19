@@ -216,3 +216,17 @@ let arrayOfSheep= [true,  true,  true,  false,
   false, false, true,  true]
 
 console.log(countSheeps(arrayOfSheep))
+
+function solution(digits){
+  let answer = 0;
+
+  for (let i=0; i < digits.length; i++){
+    let num = digits.substr(i, 5);
+    if(Number(num) > answer){
+      answer=Number(num)
+    }
+  }
+  return answer
+}
+
+console.log(solution("8273654637"))
