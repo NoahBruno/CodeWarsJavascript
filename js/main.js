@@ -198,35 +198,47 @@
 // console.log(uniqueInOrder("AABBCcAD"))
 
 //=================================================================
+//
+// function countSheeps(arrayOfSheep) {
+//   let count = 0;
+//   for(let i = 0; i < arrayOfSheep.length; i++){
+//     if(arrayOfSheep[i] === true){
+//       count++
+//     }
+//   }return count
+// }
+//
+// let arrayOfSheep= [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+//
+// console.log(countSheeps(arrayOfSheep))
+//
+// function solution(digits){
+//   let answer = 0;
+//
+//   for (let i=0; i < digits.length; i++){
+//     let num = digits.substr(i, 5);
+//     if(Number(num) > answer){
+//       answer=Number(num)
+//     }
+//   }
+//   return answer
+// }
+//
+// console.log(solution("8273654637"))
 
-function countSheeps(arrayOfSheep) {
-  let count = 0;
-  for(let i = 0; i < arrayOfSheep.length; i++){
-    if(arrayOfSheep[i] === true){
-      count++
-    }
-  }return count
-}
-
-let arrayOfSheep= [true,  true,  true,  false,
-  true,  true,  true,  true ,
-  true,  false, true,  false,
-  true,  false, false, true ,
-  true,  true,  true,  true ,
-  false, false, true,  true]
-
-console.log(countSheeps(arrayOfSheep))
-
-function solution(digits){
-  let answer = 0;
-
-  for (let i=0; i < digits.length; i++){
-    let num = digits.substr(i, 5);
-    if(Number(num) > answer){
-      answer=Number(num)
-    }
+function factorial(x){
+  let fct =1
+  if(x == 0){
+    return 1
   }
-  return answer
+  for(let i = 1; i <= x; i++)
+    fct*=i;
+    return fct
 }
 
-console.log(solution("8273654637"))
+console.log(factorial(25))
