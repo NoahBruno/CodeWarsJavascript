@@ -231,14 +231,21 @@
 //
 // console.log(solution("8273654637"))
 
-function factorial(x){
-  let fct =1
-  if(x == 0){
-    return 1
-  }
-  for(let i = 1; i <= x; i++)
-    fct*=i;
-    return fct
+// function factorial(x){
+//   let fct =1
+//   if(x == 0){
+//     return 1
+//   }
+//   for(let i = 1; i <= x; i++)
+//     fct*=i;
+//     return fct
+// }
+//
+// console.log(factorial(25))
+//is palindrome codewars
+function isPalindrome(l){
+  let x = l.split("").reverse().join("");
+  return x == l;
 }
 
-console.log(factorial(25))
+console.log(isPalindrome("racecar"))
