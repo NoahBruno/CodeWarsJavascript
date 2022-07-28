@@ -243,9 +243,17 @@
 //
 // console.log(factorial(25))
 //is palindrome codewars
-function isPalindrome(l){
-  let x = l.split("").reverse().join("");
-  return x == l;
+// function isPalindrome(l){
+//   let x = l.split("").reverse().join("");
+//   return x == l;
+// }
+//
+// console.log(isPalindrome("racecar"))
+
+function moveZeros(a){
+    let zerosArr = a.filter(num => num === 0)
+    let nonZeroArr = a.filter(num => num !== 0)
+    return nonZeroArr.concat(zerosArr)
 }
 
-console.log(isPalindrome("racecar"))
+console.log(moveZeros([false,1,0,3,5,0,"b"]))
