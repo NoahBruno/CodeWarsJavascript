@@ -249,11 +249,24 @@
 // }
 //
 // console.log(isPalindrome("racecar"))
+//
+// function moveZeros(a){
+//     let zerosArr = a.filter(num => num === 0)
+//     let nonZeroArr = a.filter(num => num !== 0)
+//     return nonZeroArr.concat(zerosArr)
+// }
+//
+// console.log(moveZeros([false,1,0,3,5,0,"b"]))
+//
+//Square (n) Sum
+function squareSum(numbers){
+    let n = 0
+    for(let i = 0; i < numbers.length; i++){
+        let newNum = Math.pow(numbers[i], 2)
+        n += newNum
+    }
+    return n
 
-function moveZeros(a){
-    let zerosArr = a.filter(num => num === 0)
-    let nonZeroArr = a.filter(num => num !== 0)
-    return nonZeroArr.concat(zerosArr)
 }
 
-console.log(moveZeros([false,1,0,3,5,0,"b"]))
+console.log(squareSum([1,5,3]))
